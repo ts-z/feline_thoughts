@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Pridi&display=swap");
+:root {
+  --dark: #34576b;
+  --light: #bcdcee;
+  --shadow: #55636b;
+  --dark-shadow: #000000;
+  --highlight: goldenrod;
+}
+.light_theme {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: all 1s;
+}
+h1 {
+  font-family: "Holtwood One SC", serif;
+}
+p,
+footer {
+  font-family: "Pridi", serif;
+}
+.dark_theme {
+  color: var(--light);
+  background-color: var(--dark);
+  transition: all 1s;
+}
+.bi {
+  color: var(--highlight);
+}
+#light,
+#dark {
+  border-radius: 20%;
+  width: fit-content;
+  padding: 12px;
+  position: fixed;
+  top: 40px;
+  right: 15px;
+  border-radius: 2rem;
+  transition: all 1s;
+}
+#light:hover {
+  transform: translate(-1mm, -1mm);
+  box-shadow: 5px 5px 5px var(--dark-shadow);
+}
+#dark:hover {
+  transform: translate(-1mm, -1mm);
+  box-shadow: 5px 5px 5px var(--shadow);
+}
+#theme_toggle:hover {
+  cursor: pointer;
+}
+.img_in,
+.img_out {
+  height: 200px;
+  width: auto;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10%;
+  animation-duration: 2s;
+}
+.img_in {
+  animation-name: slide_in;
+  display: flex;
+}
+.img_out {
+  display: none;
+}
+@keyframes slide_in {
+  from {
+    margin-left: -150%;
+  }
+  to {
+    margin-left: 38%;
+  }
+}
+.light {
+  background-color: var(--light);
+}
+.dark {
+  background-color: var(--dark);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#root {
+  padding: 5%;
+}
